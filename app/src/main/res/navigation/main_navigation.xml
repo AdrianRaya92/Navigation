@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/nav_graph">
+
+    <include app:graph="@navigation/nav_graph"
+        app:popUpToSaveState="true"
+        app:restoreState="true"/>
+    <include app:graph="@navigation/nav_graph_core"
+        app:popUpToSaveState="true"
+        app:restoreState="true"/>
+    <include app:graph="@navigation/nav_graph_platform"
+        app:popUpToSaveState="true"
+        app:restoreState="true"/>
+
+</navigation>
