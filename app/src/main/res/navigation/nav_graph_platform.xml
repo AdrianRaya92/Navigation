@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_platform"
+    app:startDestination="@id/platformOne">
+
+    <fragment
+        android:id="@+id/platformOne"
+        android:name="com.dormakaba.navigation.FragmentPlatformOne"
+        android:label="FragmentPlatformOne"
+        tools:layout="@layout/fragment_platform_one">
+        <action
+            android:id="@+id/action_fragment_platform_one_to_two"
+            app:destination="@id/fragmentPlatformTwo"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPlatformTwo"
+        android:name="com.dormakaba.navigation.FragmentPlatformTwo"
+        android:label="FragmentPlatformTwo"
+        tools:layout="@layout/fragment_platform_two">
+        <action
+            android:id="@+id/action_fragment_platform_two_to_one"
+            app:destination="@id/platformOne"/>
+    </fragment>
+
+</navigation>
